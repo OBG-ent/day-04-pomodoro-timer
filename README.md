@@ -1,48 +1,53 @@
-# 🟩 Wordly — a Wordle clone — Day 4 (featured build) of my daily coding journey
+# 🍅 Pomodoro Timer — Day 4 (simple build) of my daily coding journey
 
-Guess the 5-letter word in 6 tries. Green means right letter, right spot. Yellow means right letter, wrong spot. Gray means it's not in the word at all. You know the drill — but this one is **mine**, built from scratch.
+A beautiful, no-dependency **Pomodoro focus timer** in a single HTML file. Work in focused bursts, take real breaks, and watch your completed sessions stack up.
+
+## Why this exists
+
+The Pomodoro Technique is simple: 25 minutes of deep focus, 5 minutes of rest, and a longer break every 4 sessions. This timer makes it effortless — no sign-up, no install, works offline once saved.
 
 ## ✨ Features
 
-- 🎮 **Full Wordle gameplay** — 6 guesses, correct duplicate-letter logic, word-list validation
-- ⌨️ **On-screen + physical keyboards** — type or tap, with key colors updating as you learn
-- 🎞️ **Flip + pop + shake animations** for tile reveals and invalid guesses
-- 📊 **Stats that persist** — games played, win %, current streak, best streak (localStorage)
-- 📤 **Share your result** — one click copies the emoji grid (`🟩🟨⬛`) like the real thing
-- 🌙 **Dark / light mode** toggle (saved between visits)
-- 📖 600+ word dictionary for answers and guesses
+- 🎯 **Focus / Short Break / Long Break modes** — auto-advances when a session ends
+- ⏱️ **Animated progress ring** that drains as time passes, color-coded per mode
+- 🔔 **Chime sound** (Web Audio — zero audio files needed) when a session finishes
+- ⚙️ **Customizable durations** — change focus/break lengths right on the page
+- 🍅 **Session tracker** — dots fill up as you complete focus sessions
+- ⏸️ **Start / Pause / Reset** controls, plus a live countdown in the browser tab title
+- 📱 Responsive, mobile-friendly dark UI
 
 ## 🚀 Run it in 30 seconds
 
-1. Download all files (`index.html`, `styles.css`, `script.js`, `words.js`) into one folder
-2. Double-click `index.html`
-3. Start guessing — use your keyboard or the on-screen keys
+1. Download `index.html` (or clone this repo)
+2. Double-click it — it opens in your browser
+3. Hit **Start** and get to work 🍅
 
 No build step. No dependencies. No server.
 
 ## 📸 What you see
 
 ```
-┌───────────────────────────┐
-│        WORDLY             │
-│  ⬛ ⬛ ⬛ ⬛ ⬛            │  ← 6 rows of tiles
-│  ⬛ ⬛ ⬛ ⬛ ⬛            │
-│  🟨 ⬛ 🟩 ⬛ 🟨            │  ← revealing after Enter
-│  ...                      │
-│  [Q][W][E][R][T][Y]...    │  ← color-coded keyboard
-│  📤 Share result  🔄 Play │
-│  Played 4 · Win 75% · 🔥 3│
-└───────────────────────────┘
+┌─────────────────────────┐
+│        🍅 POMODORO      │
+│   [Focus][Short][Long]  │
+│      ╭─────────╮        │
+│      │  25:00  │  ← big countdown ring
+│      ╰─────────╯        │
+│   Session 1 of 4 · focus│
+│   [Start]    [Reset]    │
+│  Focus: 25  Short: 5    │
+│  Completed sessions ●···│
+└─────────────────────────┘
 ```
 
 ## 🧠 What I practiced
 
-- Game-state management and input handling (two keyboard sources, one handler)
-- Two-pass letter evaluation algorithm that handles duplicate letters correctly
-- CSS animations: keyframe flip, pop, and shake
-- `localStorage` for stats + theme persistence
-- Clipboard API for the share button
+- DOM manipulation and event listeners
+- `setInterval` / `clearInterval` timer logic
+- SVG circular progress ring (stroke-dasharray math)
+- Web Audio API for the chime (no audio assets)
+- CSS custom properties for theming
 
 ## 🔁 The streak
 
-This is **Day 4** of my daily coding journey — one simple and one featured build every day. Full streak on my profile: [github.com/OBG-ent](https://github.com/OBG-ent)
+This is **Day 4** of my daily coding journey — one simple and one featured build every day. See the full streak on my profile: [github.com/OBG-ent](https://github.com/OBG-ent)
