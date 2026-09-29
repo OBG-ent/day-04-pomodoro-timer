@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wordly — a Wordle clone · Day 4 featured build</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>WORDLY</h1>
+  <p class="tagline">Day 4 featured build of my daily coding journey</p>
+  <button id="themeBtn" title="Toggle dark / light mode">🌙</button>
+</header>
+
+<main>
+  <!-- toast messages: "Not in word list", "Not enough letters", win/lose -->
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- 6 rows × 5 tiles game board, built by JS -->
+  <div id="board" class="board"></div>
+
+  <!-- on-screen keyboard, built by JS -->
+  <div id="keyboard" class="keyboard"></div>
+
+  <!-- stats + share panel, shown after a game ends -->
+  <div id="endPanel" class="end-panel hidden">
+    <h2 id="endTitle"></h2>
+    <div class="stats">
+      <div class="stat"><span id="statPlayed">0</span><label>Played</label></div>
+      <div class="stat"><span id="statWinPct">0</span><label>Win %</label></div>
+      <div class="stat"><span id="statStreak">0</span><label>Streak</label></div>
+      <div class="stat"><span id="statBest">0</span><label>Best streak</label></div>
+    </div>
+    <div class="end-buttons">
+      <button id="shareBtn">📤 Share result</button>
+      <button id="againBtn">🔄 Play again</button>
+    </div>
+  </div>
+</main>
+
+<script src="words.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
